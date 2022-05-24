@@ -1,52 +1,72 @@
 *{
-  margin: 0;
   padding: 0;
-}
-.grid-container{
-  display: grid;
-  grid-template-areas: "header header"
-                        "menu contenido"
-                        "footer footer";
-  grid-gap: 10px;
-  background-color: #2196F3;
-  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-header {
- grid-area: header;
-  background-color: aquamarine;
-  height: 10vh;
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-menu{
-  grid-area: menu;
-  background-color: aqua;
-  height: 80vh;
-  width: 10vw;
-}
-
-footer{
-  grid-area: footer;
-  background-color: lightblue;
-  height: 10vh;
-}
-.grid-contenido-container{
-  grid-area: contenido;
+.card{
+  width: 250px;
+  height: auto;
+  position: relative;
   background-color: bisque;
-  height: 80vh;
-  width: 90vw;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.grid-item{
-  background-color: chocolate;
-  border: 2px solid black;
+.card > *{
+  padding: 10px;
 }
 
+.card .card-img{
+  height: 150px;
+  width: 100%;
+  /* border: 5px solid black;
+  border-radius: 50%; */
+  background-position: center center;
+  background-size: cover;
+}
+body{
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+}
 
+.card .card-title {
+  padding: 20px 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 0px 2px #226254;
+}
 
+.card:nth-child(1) .card-img{
+  background-image: url(/assets/img/elia-pellegrini-jm-7rox0794-unsplash.jpg); 
+}
+.card:nth-child(2) .card-img{
+  background-image: url(/assets/img/eve-maier-bG7JSKq5W5E-unsplash.jpg); 
+}
+.card:nth-child(3) .card-img{
+  background-image: url(/assets/img/jessica-weiller-So4eFi-d1nc-unsplash.jpg); 
+}
+.card:nth-child(4) .card-img{
+  background-image: url(/assets/img/usama-akram-kP6knT7tjn4-unsplash.jpg); 
+}
 
+.card:hover {
+  background-color: darkslategray;
+  box-shadow: 0px 0px 10px #226254;
+  color: white;
+}
 
+.card .card-text{
+  line-height: 20px;
+}
