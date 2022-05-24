@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: "header header"
+                        "menu contenido"
+                        "footer footer";
+  grid-gap: 10px;
+  background-color: #2196F3;
+  height: 100vh;
+}
+
+header {
+ grid-area: header;
+  background-color: aquamarine;
+  height: 10vh;
+}
+
+menu{
+  grid-area: menu;
+  background-color: aqua;
+  height: 80vh;
+  width: 10vw;
+}
+
+footer{
+  grid-area: footer;
+  background-color: lightblue;
+  height: 10vh;
+}
+.grid-contenido-container{
+  grid-area: contenido;
+  background-color: bisque;
+  height: 80vh;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  
+}
+
+.grid-item{
+  background-color: chocolate;
+  border: 2px solid black;
+}
+
+
+
+
+
