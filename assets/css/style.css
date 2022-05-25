@@ -1,72 +1,183 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500&display=swap');
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-.card-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.card{
-  width: 250px;
-  height: auto;
-  position: relative;
-  background-color: bisque;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.card > *{
-  padding: 10px;
-}
-
-.card .card-img{
-  height: 150px;
-  width: 100%;
-  /* border: 5px solid black;
-  border-radius: 50%; */
-  background-position: center center;
-  background-size: cover;
-}
 body{
   font-family: 'Roboto Flex', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header    header"
+    "sidebar  main" "footer  footer";
+  grid-template-columns: 0.2fr auto;
+  grid-template-rows: 10% 80% 10%;
+  height: 100vh;
+  gap: 10px;
+}
+
+header {
+  background-color: darkcyan;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+header h1 {
+  font-size: 2rem;
+  color: white;
+  margin-left: 10px;
+  
+}
+
+header .icons{
+ padding-right: 150px;
+ font-size: 40px;
+}
+
+menu {
+  background-color: bisque;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  
+}
+
+menu span {
+  color : grey;
+  font-size: 0.9rem;
+}
+
+menu h2 {
+  font-size: 1rem;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+menu ul  {
+  text-decoration:  none;
+  list-style: none;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
-.card .card-title {
-  padding: 20px 10px;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 1px 0px 2px #226254;
+menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 10px;
+  
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+main{
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  gap: 10px;
+
+}
+
+.card{
+  
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  border: 1px solid #e5e5e5;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.card-img {
+  height: 80%;
+  /* border: 1px solid black; */
+  background-size: cover;
+  background-position: center center;
+  
+}
+.card-text{
+  padding: 10px;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: center;
+}
+
+.card-text h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px;
+}
+
+.card-text h6 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+.card-footer{
+  padding-top: 10px;
+  text-align: center;
+  text-justify: center;
+}
+.card-footer a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+
+.card-footer{
+  background-color: black;
+  color: white;
+  height: 10%;
+}
+
+i{
+  color: white;
+  font-size: 1rem;
+}
+
+
+
+footer {
+  background-color: darkcyan;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .card:nth-child(1) .card-img{
   background-image: url(/assets/img/elia-pellegrini-jm-7rox0794-unsplash.jpg); 
 }
 .card:nth-child(2) .card-img{
-  background-image: url(/assets/img/eve-maier-bG7JSKq5W5E-unsplash.jpg); 
+  background-image: url(/assets/img/ox-street-BWPqHZBhMVA-unsplash.jpg); 
 }
 .card:nth-child(3) .card-img{
-  background-image: url(/assets/img/jessica-weiller-So4eFi-d1nc-unsplash.jpg); 
+  background-image: url(/assets/img/jazmin-quaynor-qApWjd0g1gw-unsplash.jpg); 
 }
 .card:nth-child(4) .card-img{
   background-image: url(/assets/img/usama-akram-kP6knT7tjn4-unsplash.jpg); 
 }
-
-.card:hover {
-  background-color: darkslategray;
-  box-shadow: 0px 0px 10px #226254;
-  color: white;
+.card:nth-child(5) .card-img{
+  background-image: url(/assets/img/charlesdeluvio-1-nx1QR5dTE-unsplash.jpg); 
 }
-
-.card .card-text{
-  line-height: 20px;
+.card:nth-child(6) .card-img{
+  background-image: url(/assets/img/jessica-weiller-So4eFi-d1nc-unsplash.jpg); 
 }
